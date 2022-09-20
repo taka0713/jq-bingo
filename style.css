@@ -1,0 +1,10 @@
+.all_number {
+  border: 1px solid;
+  width: 500px;
+  height: 350px;
+}
+
+.all_number p {
+  text-align: center;
+  font-size: 20px;
+}
