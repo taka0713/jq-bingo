@@ -1,25 +1,25 @@
 $(function () {
   // 回した数を管理する変数
-  let tyunisu = 0;
+  let spin_manage = 0;
   let init = () => {
     // ビンゴカードの数字を初期化する処理
-    let hoge = [];
+    let range = [];
     for (let i = 0; i <= 49; i++) {
-      hoge.push(i);
+      range.push(i);
     }
-    let fuga = [];
-    $.each(hoge, function () {
-      let random = Math.floor(Math.random() * hoge.length);
-      fuga.push(hoge.splice(random, 1)[0]);
+    let bingo_card = [];
+    $.each(range, function () {
+      let random = Math.floor(Math.random() * range.length);
+      bingo_card.push(range.splice(random, 1)[0]);
     });
-    $(".unko").map(function (n) {
-      $(this).text(fuga[n]);
+    $(".card_number").map(function (n) {
+      $(this).text(bingo_card[n]);
     });
     // ランダムで出た数字の色を初期化
     for (let i = 0; i < 50; i++) {
       $("#target_" + i).css("color", "black");
     }
-    tyunisu = 0;
+    spin_manage = 0;
     $("#spin_count").val(0);
     $("#bingo_number").text("-");
   };
@@ -30,8 +30,8 @@ $(function () {
     let random = Math.floor(Math.random() * 49) + 1;
     $("#bingo_number").text(random);
     $("#target_" + random).css("color", "red");
-    tyunisu++;
-    $("#spin_count").val(tyunisu);
+    spin_manage++;
+    $("#spin_count").val(spin_manage);
   });
 
   $("#reset").on("click", function () {
