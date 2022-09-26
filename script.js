@@ -28,7 +28,13 @@ $(function () {
 
   $("#spin").on("click", function () {
     let random = Math.floor(Math.random() * 49) + 1;
+    let spin_number = [];
+    $.each(random, function () {
+      let random = Math.floor(Math.random() * random.length);
+      random.push(random.splice(random, 1)[0]);
+    });
     $("#bingo_number").text(random);
+
     $("#target_" + random).css("color", "red");
     spin_manage++;
     $("#spin_count").val(spin_manage);
