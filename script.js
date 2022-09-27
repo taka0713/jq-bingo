@@ -1,6 +1,7 @@
 $(function () {
   // 回した数を管理する変数
   let spin_manage = 0;
+
   let init = () => {
     // ビンゴカードの数字を初期化する処理
     let range = [];
@@ -30,8 +31,8 @@ $(function () {
     let random = Math.floor(Math.random() * 49) + 1;
     let spin_number = [];
     $.each(random, function () {
-      let random = Math.floor(Math.random() * random.length);
-      random.push(random.splice(random, 1)[0]);
+      let random_spin = Math.floor(Math.random() * random.length);
+      random.push(random.splice(random_spin, 1)[0]);
     });
     $("#bingo_number").text(random);
 
