@@ -27,20 +27,27 @@ $(function () {
   init();
 
   $("#spin").on("click", function () {
-    let random = Math.floor(Math.random() * 49) + 1;
-    let spin_number = [];
-    $.each(random, function () {
-      let random_spin = Math.floor(Math.random() * random.length);
-      random.push(random.splice(random_spin, 1)[0]);
+    let spin_random = Math.floor(Math.random() * 49);
+    $("#bingo_number").text(spin_random);
+    $("#" + "target_" + spin_random).css("color", "red");
+    $(".card_number").map(function (n) {
+      $(this).prop("id");
     });
-    $("#bingo_number").text(random);
-
-    $("#target_" + random).css("color", "red");
-    spin_manage++;
-    $("#spin_count").val(spin_manage);
   });
 
   $("#reset").on("click", function () {
     init();
   });
 });
+
+// let random = Math.floor(Math.random() * 49) + 1;
+// let spin_number = [];
+// $.each(random, function () {
+//   let random_spin = Math.floor(Math.random() * random.length);
+//   random.push(random.splice(random_spin, 1)[0]);
+// });
+// $("#bingo_number").text(random);
+
+// $("#target_" + random).css("color", "red");
+// spin_manage++;
+// $("#spin_count").val(spin_manage);
