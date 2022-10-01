@@ -14,6 +14,8 @@ $(function () {
     });
     $(".card_number").map(function (n) {
       $(this).text(bingo_card[n]);
+      $(this).prop("id", "display_number_" + n);
+      console.log("display_number_" + n);
     });
     // ランダムで出た数字の色を初期化
     for (let i = 0; i < 50; i++) {
