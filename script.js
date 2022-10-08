@@ -1,6 +1,7 @@
 $(function () {
   // 回した数を管理する変数
   let spin_manage = 0;
+
   let init = () => {
     // ビンゴカードの数字を初期化する処理
     let range = [];
