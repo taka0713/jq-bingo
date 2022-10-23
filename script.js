@@ -1,6 +1,5 @@
 $(function () {
   // 回した数を管理する変数
-
   let spin_manage = 0;
   let init = () => {};
   let random = Math.floor(Math.random() * 49) + 1;
