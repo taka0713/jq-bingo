@@ -8,18 +8,17 @@ $(function () {
     $(this).text(random);
     let loop = [];
     loop.push(random);
-    console.log(loop);
 
-    let randomNumber = [];
-    function createNumber() {
-      while (randomNumber.length < 81) {
-        let r = Math.floor(Math.random() * 81) + 1;
-        if (randomNumber.indexOf(r) === -1) {
-          randomNumber.push(r);
-          return r;
-        }
-      }
-    }
+    // let randomNumber = [];
+    // function createNumber() {
+    //   while (randomNumber.length < 81) {
+    //     let r = Math.floor(Math.random() * 81) + 1;
+    //     if (randomNumber.indexOf(r) === -1) {
+    //       randomNumber.push(r);
+    //       return r;
+    //     }
+    //   }
+    // }
   });
 
   $("#spin").on("click", function () {
